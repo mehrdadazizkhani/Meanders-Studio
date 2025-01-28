@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meanders</title>
+    <!-- Include SAT.js for vector math and collision detection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sat/0.8.0/SAT.min.js"></script>
+    <!-- Include Underscore.js for utility functions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">meanders</div>
+    <!-- <div class="container">
+      <a href="https://www.meanders.studio/" class="link"
+        >inter the website ...</a>
+    </div> -->
+    <div class="parameters">
+        <div class="parameter">
+          <label for="particle">particle count</span></label>
+          <span class="valueSpan" id="particleValue"></span>
+          <input
+            name="particle"
+            class="slider"
+            id="particle"
+            type="range"
+            step="10"
+            min="200"
+            max="10000"
+            value="5000"
+          />
+        </div>
+        <div class="parameter">
+          <label for="angle">angle slime</span></label>
+          <span class="valueSpan" id="angleValue"></span>
+          <input
+            name="angle"
+            class="slider"
+            id="angle"
+            type="range"
+            step="0.01"
+            min="0.02"
+            max="0.9"
+            value="0.3"
+          />
+        </div>
+        <div class="parameter">
+          <label for="sensor">sensor slime</span></label>
+          <span class="valueSpan" id="sensorValue"></span>
+          <input
+            name="sensor"
+            class="slider"
+            id="sensor"
+            type="range"
+            step="0.5"
+            min="2"
+            max="50"
+            value="15"
+          />
+        </div>
+       <input id="colorPicker" type="color" value="#777777">
+      </div>
+    <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
