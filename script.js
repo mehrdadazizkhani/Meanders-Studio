@@ -5,6 +5,24 @@ const particleValue = document.querySelector("#particleValue");
 const angleSlime = document.querySelector("#angle");
 const angleValue = document.querySelector("#angleValue");
 const colorPicker = document.querySelector("#colorPicker");
+const settingBtn = document.querySelector("#settingBtn");
+const setting = document.querySelector("#setting");
+const btnTitle = document.querySelector("#btnTitle");
+
+const hanldeCollapse = () => {
+  collapse
+    ? (setting.style.transform = "translateX(382px)")
+    : (setting.style.transform = "translateX(0px)");
+
+  collapse ? (btnTitle.textContent = "open") : (btnTitle.textContent = "close");
+};
+
+let collapse = true;
+hanldeCollapse();
+settingBtn.addEventListener("click", () => {
+  collapse = !collapse;
+  hanldeCollapse();
+});
 
 let scriptActiveSlime = true;
 let decay_slime = 0.05;

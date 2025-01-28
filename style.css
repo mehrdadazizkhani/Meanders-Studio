@@ -15,33 +15,17 @@ body {
   left: 0;
   background-color: black;
   height: 100vh;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  user-select: none;
-  z-index: 1;
+  width: 100vw;
 }
 
 .title {
-  margin-top: calc(100vh - 6rem - 5px);
   position: sticky;
+  margin-top: calc(100vh - 6rem - 5px);
+  margin-left: 5px;
+  top: 0;
   text-transform: capitalize;
   font-size: 6rem;
-  top: 0;
   z-index: 1;
-}
-
-.link {
-  color: white;
-  font-style: italic;
-  text-decoration: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  animation: pulse 3s infinite ease-in-out;
-  text-transform: capitalize;
 }
 
 @keyframes pulse {
@@ -59,19 +43,53 @@ body {
 label {
   width: 40%;
   text-transform: capitalize;
+  user-select: none;
+}
+
+#setting {
+  position: absolute;
+  width: 400px;
+  height: 130px;
+  top: 10px;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #444444;
+  border-radius: 10px 0px 0px 10px;
+  z-index: 1;
+  transition: transform 1s;
+}
+
+#settingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  height: 100%;
+  width: 20px;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+}
+
+#settingBtn:hover {
+  background-color: #555555;
+}
+
+#btnTitle {
+  text-align: center;
+  height: 100%;
+  font-size: 0.6rem;
+  writing-mode: vertical-lr;
+  text-transform: uppercase;
 }
 
 .parameters {
-  position: absolute;
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
   padding: 10px;
-  top: 0;
-  right: 0;
-  width: 400px;
+  width: 100%;
   gap: 10px;
-  z-index: 1;
 }
 
 .parameter {
@@ -115,6 +133,7 @@ label {
 
 .valueSpan {
   width: 20%;
+  user-select: none;
 }
 
 #colorPicker {
